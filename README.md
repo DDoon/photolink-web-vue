@@ -1,2 +1,2 @@
 # photolink-web
-Project name: Photolink / Development: next &amp; vue
+Project name: Photolink / Development: vue3
