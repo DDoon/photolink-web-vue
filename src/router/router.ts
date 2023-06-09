@@ -1,5 +1,6 @@
-import BoardRegisterPage from "../views/board/BoardRegisterPage.vue";
-import BoardGetPage from "../views/board/BoardGetPage.vue";
+import BoardRegisterPage from "../views/Board/BoardRegisterPage.vue";
+import BoardGetPage from "../views/Board/BoardGetPage.vue";
+import MocksTestPage from "../views/Mocks/MocksTestPage.vue";
 
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/board/list",
     name: "BoardGetPage",
     component: BoardGetPage,
+  },
+  {
+    path: "/test",
+    name: "MocksTestPage",
+    component: MocksTestPage,
   },
 ];
 
