@@ -40,7 +40,7 @@ const onSubmit = () => {
         </td>
       </tr>
       <tr>
-        <td>본문</td>
+        <td>본문 </td>
         <td>
           <textarea cols="50" rows="20" v-model="content" />
         </td>
