@@ -1,0 +1,63 @@
+// *? Flexbox Mixins
+
+//* 일반 Flexbox 레이아웃 설정
+.flexbox(@jc: center, @ai: center) {
+  display: flex;
+  align-items: @ai;
+  justify-content: @jc;
+}
+
+//* 인라인 Flexbox 레이아웃 설정
+.inline-flexbox(@jc: center, @ai: center) {
+  display: inline-flex;
+  align-items: @ai;
+  justify-content: @jc;
+}
+
+//* 컬럼 방향 Flexbox 레이아웃 설정
+.column-flexbox(@jc: center, @ai: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: @ai;
+  justify-content: @jc;
+}
+
+// *? Position Mixins
+
+//* 가로 중앙 정렬 (절대 또는 고정 위치)
+.pos-center-x(@type: absolute) when ((@type = absolute) or (@type = fixed)) {
+  position: @type;
+  top: 50%;
+  transform: translateX(-50%);
+}
+
+//* 세로 중앙 정렬 (절대 또는 고정 위치)
+.pos-center-y(@type: absolute) when ((@type = absolute) or (@type = fixed)) {
+  position: @type;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//* 가로 및 세로 중앙 정렬 (절대 또는 고정 위치)
+.pos-center(@type: absolute) when ((@type = absolute) or (@type = fixed)) {
+  position: @type;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// *? 기타 등등
+
+//* 글씨를 일정 길이 이상 자르기
+.truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//* 스크롤바 숨기기 (웹킷 기반 브라우저)
+.no-scrollbar() {
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}

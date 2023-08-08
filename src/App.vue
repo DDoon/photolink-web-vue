@@ -6,5 +6,8 @@
 
 
 </template>
-
 <script setup lang="ts"></script>
+
+<style lang="less">
+@import "../src/less/index.less";
+</style>
