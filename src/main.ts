@@ -18,8 +18,6 @@ function setupPlugins() {
 async function setupApp() {
   setupStore(app);
   app.use(router);
-
-  // app.mount("#app");
   app.use(Antd).mount("#app");
 }
 
