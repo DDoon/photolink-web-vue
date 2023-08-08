@@ -3,7 +3,7 @@ import { UserOutlined } from "@ant-design/icons-vue";
 import { DownOutlined } from "@ant-design/icons-vue";
 
 defineOptions({
-  name: "SidebarProfile",
+  name: "GnbSidebarProfile",
 });
 
 const { count } = defineProps({
