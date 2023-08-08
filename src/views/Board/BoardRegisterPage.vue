@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { Board } from "../../types/Board";
 import { useBoardStore } from "../../store/modules/Board/Board";
+import Table from "../../components/common/Table.vue";
 
 defineOptions({
   name: "BoardRegisterPage",
@@ -12,6 +13,32 @@ const boardStore = useBoardStore();
 const title = ref("");
 const writer = ref("");
 const content = ref("");
+
+const tableColumns = [
+  {
+    title: "제목",
+    dataIndex: "title",
+    key: "title",
+  },
+  {
+    title: "작성자",
+    dataIndex: "writer",
+    key: "writer",
+  },
+  {
+    title: "본문",
+    dataIndex: "content",
+    key: "content",
+  },
+];
+
+const tableData = [
+  {
+    title: "집",
+    writer: "가고",
+    content: "싶다",
+  },
+];
 
 const onSubmit = () => {
   const newBoard: Board = {
@@ -52,4 +79,6 @@ const onSubmit = () => {
       <!-- <router-link :to="{ name: 'JpaBoardListPage' }"> 취소 </router-link> -->
     </div>
   </form>
+
+  <Table :columns="tableColumns" :data="tableData" />
 </template>

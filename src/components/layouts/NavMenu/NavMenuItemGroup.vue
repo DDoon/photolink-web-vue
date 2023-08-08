@@ -3,7 +3,9 @@ defineOptions({
   name: "NavMenuItemGroup",
 });
 
-const { title } = defineProps(["title"]);
+const { title } = defineProps({
+  title: String,
+});
 </script>
 <template>
   <a-menu-item-group :title="title">
