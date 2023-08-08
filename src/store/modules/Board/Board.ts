@@ -3,7 +3,7 @@ import axios from "axios";
 import { Board } from "../../../types/Board";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:7777", // Use correct port
+  baseURL: "http://localhost:2727", // Use correct port
 });
 
 export const useBoardStore = defineStore({
