@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import NavMenuItemGroup from "../NavMenu/NavMenuItemGroup.vue";
 import NavMenuItem from "../NavMenu/NavMenuItem.vue";
-import GnbSidebarProfile from "./GnbSidebarProfile.vue";
 import { ref } from "vue";
 // import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons-vue";
 
@@ -45,9 +44,6 @@ const otherItems2 = [
     "
   >
     <a-menu v-model:selectedKeys="selectedKeys" theme="gray-3" mode="inline">
-      <NavMenuItemGroup>
-        <GnbSidebarProfile :count="2" />
-      </NavMenuItemGroup>
       <NavMenuItemGroup title="메인">
         <NavMenuItem :subKey="'sub1'" :title="'홈'" :items="mainItems" />
         <NavMenuItem :subKey="'sub2'" :title="'상품 관리'" :items="mainItems" />
