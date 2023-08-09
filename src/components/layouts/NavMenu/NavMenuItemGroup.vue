@@ -12,5 +12,3 @@ const { title } = defineProps({
     <slot></slot>
   </a-menu-item-group>
 </template>
-
-<style lang="less"></style>
