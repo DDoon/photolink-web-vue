@@ -12,4 +12,3 @@ const props: CardProps = defineProps(cardProps());
     <slot></slot>
   </a-card>
 </template>
-<style lang="less" scoped></style>
