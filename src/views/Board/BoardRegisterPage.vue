@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { Board } from "../../types/Board";
 import { useBoardStore } from "../../store/modules/Board/Board";
 import Table from "../../components/common/Table.vue";
+import Card from "../../components/common/Card.vue";
 
 defineOptions({
   name: "BoardRegisterPage",
@@ -20,23 +21,11 @@ const tableColumns = [
     dataIndex: "title",
     key: "title",
   },
-  {
-    title: "작성자",
-    dataIndex: "writer",
-    key: "writer",
-  },
-  {
-    title: "본문",
-    dataIndex: "content",
-    key: "content",
-  },
 ];
 
 const tableData = [
   {
     title: "집",
-    writer: "가고",
-    content: "싶다",
   },
 ];
 
@@ -52,6 +41,11 @@ const onSubmit = () => {
 </script>
 
 <template>
+  <Card :title="'왜안나오지'">
+    <span>asdasd</span>
+    <div>asdasdasd</div>
+  </Card>
+
   <form @submit.prevent="onSubmit">
     <table>
       <tr>
@@ -80,5 +74,5 @@ const onSubmit = () => {
     </div>
   </form>
 
-  <Table :columns="tableColumns" :data="tableData" />
+  <Table :columns="tableColumns" :data-source="tableData"></Table>
 </template>
