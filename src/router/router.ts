@@ -10,6 +10,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     component: Layout,
   },
+  // * 대시보드
   {
     path: "/home",
     name: "HomePage",
@@ -22,6 +23,59 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+
+  // * 유저
+  {
+    path: "/user/update",
+    name: "UserUpdatePage",
+    component: Layout,
+    children: [
+      {
+        path: "/user/update",
+        name: "UserUpdatePage",
+        component: () => import("../views/User/UserUpdatePage.vue"),
+      },
+    ],
+  },
+
+  // * 상품
+  {
+    path: "/product/register", // * 상품 등록
+    name: "ProductRegisterPage",
+    component: Layout,
+    children: [
+      {
+        path: "/product/register",
+        name: "ProductRegisterPage",
+        component: () => import("../views/Product/ProductRegisterPage.vue"),
+      },
+    ],
+  },
+  {
+    path: "/product/update", // * 상품 수정
+    name: "ProductUpdatePage",
+    component: Layout,
+    children: [
+      {
+        path: "/product/update",
+        name: "ProductUpdatePage",
+        component: () => import("../views/Product/ProductUpdatePage.vue"),
+      },
+    ],
+  },
+  {
+    path: "/product/list", // * 상품 목록
+    name: "ProductListPage",
+    component: Layout,
+    children: [
+      {
+        path: "/product/list",
+        name: "ProductListPage",
+        component: () => import("../views/Product/ProductListPage.vue"),
+      },
+    ],
+  },
+
   {
     path: "/board",
     name: "BoardPage",

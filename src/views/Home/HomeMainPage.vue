@@ -55,6 +55,7 @@ const handleCancel = (): void => {
         <a-button type="primary" @click="handleOk">Custom OK</a-button>
       </template>
     </Modal>
+    <Button>asdasd</Button>
   </div>
 </template>
 
