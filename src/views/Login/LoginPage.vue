@@ -2,6 +2,7 @@
 import Card from "../../components/common/Card.vue";
 import Input from "../../components/common/Input.vue";
 import Form from "../../components/common/Form.vue";
+import Button from "../../components/common/Button.vue";
 
 defineOptions({
   name: "LoginPage",
@@ -10,39 +11,50 @@ defineOptions({
 
 <template>
   <div class="login-container">
-    <Card :style="{ width: '400px', height: '200px' }">
+    <Card class="login-card" title="로그인">
       <Form>
         <Input
           class="login-input password"
-          label="이메일"
           type="email"
           placeholder="leavework@gotothe.home.com"
           :rules="[{ required: true, message: 'Please input your email!' }]"
         />
         <Input
           class="login-input password"
-          label="비밀번호"
           type="password"
-          placeholder="비밀번호를 입력해주세요"
+          placeholder="패스워드를 입력해주세요."
           :rules="[{ required: true, message: 'Please input your password!' }]"
         />
 
-        <a-button type="primary" html-type="submit">Log in</a-button>
+        <Button class="login-btn" type="primary" html-type="submit"
+          >Log in</Button
+        >
       </Form>
     </Card>
   </div>
 </template>
-<style lang="less" scoped>
+<style lang="less">
 .login-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 120px;
+  .flexbox();
   height: 100vh;
+  padding-bottom: 170px;
+  background-color: #f5f5f5;
 
-  //   .login-input {
-  //     ::v-deep .ant-input {
-  //       height: 32px;
-  //     }
-  //   }
+  .login-card {
+    width: 400px;
+    height: 250px;
+  }
+
+  .login-input {
+    &.password {
+      .ant-input-affix-wrapper {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .login-btn {
+    width: 100%;
+  }
 }
 </style>
