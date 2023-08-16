@@ -73,6 +73,5 @@ const onSubmit = () => {
       <!-- <router-link :to="{ name: 'JpaBoardListPage' }"> 취소 </router-link> -->
     </div>
   </form>
-
   <Table :columns="tableColumns" :data-source="tableData"></Table>
 </template>

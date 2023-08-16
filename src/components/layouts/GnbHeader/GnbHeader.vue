@@ -5,10 +5,6 @@ import Avatar from "@/components/common/Avatar.vue";
 defineOptions({
   name: "GnbHeader",
 });
-
-const { count } = defineProps({
-  count: Number,
-});
 </script>
 <template>
   <a-layout-header style="background: #ffffff">
@@ -18,11 +14,9 @@ const { count } = defineProps({
       <UserOutlined />
     </Avatar>
 
-    <a-badge :count="count" color="#4caf50">
-      <Avatar class="bell-icon" size="default">
-        <BellOutlined />
-      </Avatar>
-    </a-badge>
+    <Avatar class="bell-icon" size="default">
+      <BellOutlined />
+    </Avatar>
   </a-layout-header>
 </template>
 <style scoped lang="less">
