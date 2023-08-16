@@ -8,7 +8,13 @@ import Layout from "../components/layouts/Layout.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    component: Layout,
+    children: [
+      {
+        path: "/",
+        name: "LoginPage",
+        component: () => import("../views/Login/LoginPage.vue"),
+      },
+    ],
   },
   // * 대시보드
   {
