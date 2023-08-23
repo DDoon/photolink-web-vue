@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 import { useBoardStore } from "../../store/modules/Board/Board";
 import { Board } from "../../types/Board";
-
+//test
 defineOptions({
   name: "BoardGetPage",
 });
